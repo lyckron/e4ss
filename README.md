@@ -5,4 +5,6 @@ A small jQuery plugin that makes it easy to insert and customize share-link butt
 
 ## Documentation
 
+Soon to come!! :)
+
 
