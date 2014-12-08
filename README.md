@@ -7,4 +7,8 @@ A small jQuery plugin that makes it easy to insert and customize share-link butt
 
 Soon to come!! :)
 
+## Demo
+
+https://rawgit.com/lyckron/e4ss/master/demo.html
+
 
