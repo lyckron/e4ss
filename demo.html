@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Easy 4 Social Share Demo</title>
+    <style>
+        body {
+            background-color: #dddddd;
+        }
+        div#main-content {
+            margin: 0 auto;
+            padding: 10px;
+            width: 940px;
+            background-color: #ffffff;
+
+        }
+        div:not(main-content){
+            background-color: #f7f7f7;
+        }
+        @media only screen and (max-width: 960px) {
+            div#main-content {
+                width: 98%;
+                padding: 1%;
+            }
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/e4ss.min.css"/>-->
+    <!--<link rel="stylesheet" href="five-fa-icons/css/five-fa-icons.min.css"/>-->
+</head>
+<body>
+    <!-- Main Content -->
+
+    <div id="main-content">
+
+        <h2>Working with the init object</h2>
+        <hr/>
+
+        <h3>Default (display block, align left, light theme, platform colors)</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss();
+            </code>
+        </pre>
+        <div class="e4ss-default"></div>
+
+        <h3>Align center</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                    align: 'center'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-align-center"></div>
+
+        <h3>Align right</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        align: 'right'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-align-right"></div>
+
+        <h3>Default inline ex</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        display: 'inline'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-default-inline"></div>
+
+        <h3>Inline align center</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        display: 'inline',
+                        align: 'center'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-inline-align-center"></div>
+
+        <h3>Inline align right</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        display: 'inline',
+                        align: 'right'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-inline-align-right"></div>
+
+        <h3>Default dark theme - with default colors, and custom text shadow</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        textShadow: '1px 1px #000000',
+                        backgroundColor: 'dark'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-default-dark"></div>
+
+        <h3>Inline dark theme - with custom color and text shadow</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        display: 'inline',
+                        align: 'center',
+                        color: '#d1d1d1',
+                        textShadow: '1px 1px #000000',
+                        backgroundColor: 'dark'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-inline-dark"></div>
+
+        <h3>Custom Wrap Padding and Font Size</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss(
+                    init: {
+                        wrapPadding: '20px',
+                        fontSize: '1.5em'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-wrap-padding-and-font-size"></div>
+
+        <h3>Custom Border and Background Color</h3>
+        <pre>
+            <code>
+                $(div.e4ss-wrap).e4ss(
+                    init: {
+                        border: '2px solid #ADD8E6',
+                        backgroundColor: 'white'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-border-and-background-color"></div>
+
+        <h3>Custom text for all platforms</h3>
+        <pre>
+            <code>
+                $(div.e4ss-wrap).e4ss(
+                    init: {
+                        text: 'Please, Share!'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-custom-text-all"></div>
+
+        <h3>Use Share Icon for all platforms</h3>
+        <pre>
+            <code>
+                $(div.e4ss-wrap).e4ss(
+                    init: {
+                        text: '#icon'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-share-icon-all"></div>
+
+        <h2>Working with Platform Objects</h2>
+        <hr/>
+
+        <h3>Don't include a platform, ex. Twitter</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss({
+                    twitter: {
+                        include: false
+                    }
+                });
+            </code>
+        </pre>
+        <div class="e4ss-exclude-twitter"></div>
+
+        <h3>Custom Flat UI Style</h3>
+        <pre>
+            <code>
+                $(div.e4ss-wrap).e4ss(
+                    init: {
+                        color: '#ffffff',
+                        border: 'none',
+                        backgroundColor: ''
+                    },
+                    facebook: {
+                        backgroundColor: '#3b5998'
+                    },
+                    twitter: {
+                        backgroundColor: '#00aced'
+                    },
+                    linkedin: {
+                        backgroundColor: '#007bb6'
+                    },
+                    google: {
+                        backgroundColor: '#d34836'
+                    }
+                );
+            </code>
+        </pre>
+        <div class="e4ss-flat-ui"></div>
+
+        <h3>Custom platform color and text</h3>
+        <pre>
+            <code>
+                $('div.e4ss-wrap').e4ss({
+                    facebook: {
+                        color: 'green',
+                        text: 'Share on Facebook'
+                    },
+                    twitter: {
+                        color: 'orange',
+                        text: 'Share on Twitter'
+                    },
+                    linkedin: {
+                        color: 'red',
+                        text: 'Share on LinkedIn'
+                    },
+                    google: {
+                        color: 'blue',
+                        text: 'Share on Googleplus'
+                    }
+                });
+            </code>
+        </pre>
+        <div class="e4ss-platform-color-and-text"></div>
+
+        <h3>Mix share icons and text - if you for some reason would do that</h3>
+        <pre>
+            <code>
+                $('div.e4ss-mix-icon-and-text').e4ss({
+                    init: {
+                        text: '#icon'
+                    },
+                    twitter: {
+                        text: 'Share on Twitter'
+                    },
+                    google: {
+                        text: 'Share on Googleplus'
+                    }
+                });
+            </code>
+        </pre>
+        <div class="e4ss-mix-icon-and-text"></div>
+
+
+    </div>
+    <!-- / Main Content -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/e4ss.min.js"></script>
+<script>
+    /* Init object ****************************************************************/
+    // Default ex:
+    $(document).ready(function(){
+        // Default ex
+        $('div.e4ss-default').e4ss({
+            init: {
+                // Since this demo file is inside the plugin root folder, we set the default "root" path property to empty.
+                root: ''
+            }
+        });
+        // Align center ex:
+        $('div.e4ss-align-center').e4ss({
+            init: {
+                root: '',
+                align: 'center'
+            }
+        });
+        // Align right ex:
+        $('div.e4ss-align-right').e4ss({
+            init: {
+                root: '',
+                align: 'right'
+            }
+        });
+        // Default inline ex:
+        $('div.e4ss-default-inline').e4ss({
+            init: {
+                root: '',
+                display: 'inline'
+            }
+        });
+        // Inline align center ex:
+        $('div.e4ss-inline-align-center').e4ss({
+            init: {
+                root: '',
+                display: 'inline',
+                align: 'center'
+            }
+        });
+        // Inline align right ex:
+        $('div.e4ss-inline-align-right').e4ss({
+            init: {
+                root: '',
+                display: 'inline',
+                align: 'right'
+            }
+        });
+        // Default dark with text shadow ex
+        $('div.e4ss-default-dark').e4ss({
+            init: {
+                root: '',
+                textShadow: '1px 1px #000000',
+                backgroundColor: 'dark'
+            }
+        });
+        // Inline center dark with color and text shadow ex
+        $('div.e4ss-inline-dark').e4ss({
+            init: {
+                root: '',
+                display: 'inline',
+                align: 'center',
+                color: '#d1d1d1',
+                textShadow: '1px 1px #000000',
+                backgroundColor: 'dark'
+            }
+        });
+        // Custom wrapPadding and fontSize
+        $('div.e4ss-wrap-padding-and-font-size').e4ss({
+            init: {
+                root: '',
+                wrapPadding: '20px',
+                fontSize: '1.5em'
+            }
+        });
+        // Custom border and background color
+        $('div.e4ss-border-and-background-color').e4ss({
+            init: {
+                root: '',
+                border: '2px solid #ADD8E6',
+                backgroundColor: 'white'
+            }
+        });
+        // Custom text all
+        $('div.e4ss-custom-text-all').e4ss({
+            init: {
+                root: '',
+                text: 'Please, Share!'
+            }
+        });
+        // Share Icon all
+        $('div.e4ss-share-icon-all').e4ss({
+            init: {
+                root: '',
+                text: '#icon'
+            }
+        });
+
+        /* Platform objects ****************************************************************/
+
+        // Don't include platform
+        $('div.e4ss-exclude-twitter').e4ss({
+            init: {
+                root: ''
+            },
+            twitter: {
+                include: false
+            }
+        });
+        // Custom flat UI style
+        $('div.e4ss-flat-ui').e4ss({
+            init: {
+                root: '',
+                color: '#ffffff',
+                border: 'none',
+                backgroundColor: ''
+            },
+            facebook: {
+                backgroundColor: '#3b5998'
+            },
+            twitter: {
+                backgroundColor: '#00aced'
+            },
+            linkedin: {
+                backgroundColor: '#007bb6'
+            },
+            google: {
+                backgroundColor: '#d34836'
+            }
+        });
+        // Custom color and text on each platform
+        $('div.e4ss-platform-color-and-text').e4ss({
+            init: {
+                root: ''
+            },
+            facebook: {
+                color: 'green',
+                text: 'Share on Facebook'
+            },
+            twitter: {
+                color: 'orange',
+                text: 'Share on Twitter'
+            },
+            linkedin: {
+                color: 'red',
+                text: 'Share on LinkedIn'
+            },
+            google: {
+                color: 'blue',
+                text: 'Share on Googleplus'
+            }
+        });
+        // Mix Share Icons and Text
+        $('div.e4ss-mix-icon-and-text').e4ss({
+            init: {
+                root: '',
+                text: '#icon'
+            },
+            twitter: {
+                text: 'Share on Twitter'
+            },
+            google: {
+                text: 'Share on Googleplus'
+            }
+        });
+    }); // ready()
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Developers ************************************/
+
+Mark Brandt Refsing, @alias: Lyckron.
+
+/* Resources ************************************/
+
+Thanks to these great resources!
+.................................................
+http://www.sharelinkgenerator.com/
+http://fontello.com/
+http://fortawesome.github.io/Font-Awesome/
